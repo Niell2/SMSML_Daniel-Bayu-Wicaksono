@@ -33,4 +33,4 @@ jobs:
         uses: actions/upload-artifact@v4
         with:
           name: preprocessed-dataset
-          path: preprocessing/bank_transactions_preprocessing.csv
+          path: preprocessing/bank_transactions_preprocessing/
