@@ -24,19 +24,21 @@ jobs:
           python -m pip install --upgrade pip
           pip install pandas numpy scikit-learn seaborn matplotlib yellowbrick joblib
 
-      - name: Debug folder structure
+      - name: Debug directory structure
         run: |
           echo "Root directory:"
           ls
-          echo "Preprocessing folder:"
-          ls preprocessing
+          echo "Project directory:"
+          ls Eksperimen_SML_Daniel-Bayu-Wicaksono
+          echo "Preprocessing directory:"
+          ls Eksperimen_SML_Daniel-Bayu-Wicaksono/preprocessing
 
       - name: Run preprocessing script
         run: |
-          python preprocessing/automate_Daniel-Bayu-Wicaksono.py
+          python Eksperimen_SML_Daniel-Bayu-Wicaksono/preprocessing/automate_Daniel-Bayu-Wicaksono.py
 
       - name: Upload preprocessing result
         uses: actions/upload-artifact@v4
         with:
           name: preprocessed-dataset
-          path: preprocessing/bank_transactions_preprocessing.csv
+          path: Eksperimen_SML_Daniel-Bayu-Wicaksono/preprocessing/bank_transactions_preprocessing.csv
