@@ -26,7 +26,7 @@ jobs:
 
       - name: Run preprocessing script
         run: |
-           python preprocessing/automate_Daniel-Bayu-Wicaksono.py
+           python preprocessing/automate_daniel_bayu_wicaksono.py
 
       - name: Upload preprocessing result
         uses: actions/upload-artifact@v4
